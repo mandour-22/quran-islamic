@@ -16,11 +16,18 @@ const Quran = () => {
     fetchSurahs();
   }, []);
 
-  const fetchSurahs = async () => {
-    const response = await fetch("http://api.alquran.cloud/v1/surah");
-    const data = await response.json();
-    setSurahs(data.data);
+  const fetchSurahs = () => {
+    fetch("http://api.alquran.cloud/v1/surah")
+      .then((res) => res.json())
+      .then((data) => setSurahs(data.data))
+      .catch((err) => console.error(err + "error"));
   };
+
+  // const fetchSurahs = async () => {
+  //   const response = await fetch("http://api.alquran.cloud/v1/surah");
+  //   const data = await response.json();
+  //   setSurahs(data.data);
+  // };
 
   const fetchAyahs = async (index) => {
     const response = await fetch(`http://api.alquran.cloud/v1/surah/${index}`);
