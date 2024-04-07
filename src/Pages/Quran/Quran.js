@@ -31,10 +31,10 @@ const Quran = () => {
     )
       .then((res) => res.json())
       .then((data) => {
-        setAyahs(data.data.surahs);
+        setAyahs(data.data.surahs[index - 1].ayahs); // index - 1 because array indices start from 0
         setPopup(true);
       })
-      .catch((err) => console.error(err + "error"));
+      .catch((err) => console.error(err));
   };
   // fetch("https://api.quran.com/api/v4")
   //   .then((res) => res.json())
