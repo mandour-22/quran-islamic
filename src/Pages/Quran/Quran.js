@@ -13,29 +13,32 @@ const Quran = () => {
   const [popup, setPopup] = useState(false);
 
   useEffect(() => {
-    // fetchSurahs();
     fetchSurah();
   }, []);
 
   const fetchSurah = () => {
-    fetch("https://quranapi.pages.dev/api/surah.json")
+    fetch(
+      "https://raw.githubusercontent.com/MahmoudMabrok/QuranyApp/master/app/src/main/assets/quran.json"
+    )
       .then((res) => res.json())
-      .then((data) => setSurahs(data))
+      .then((data) => setSurahs(data.data.surahs))
       .catch((err) => console.error(err + "error"));
   };
 
-  // const fetchSurahs = async () => {
-  //   const response = await fetch("http://api.alquran.cloud/v1/surah");
-  //   const data = await response.json();
-  //   setSurahs(data.data);
-  // };
-
-  const fetchAyahs = async (index) => {
-    const response = await fetch(`http://api.alquran.cloud/v1/surah/${index}`);
-    const data = await response.json();
-    setAyahs(data.data.ayahs);
-    setPopup(true);
+  const fetchAyahs = (index) => {
+    fetch(
+      `https://raw.githubusercontent.com/MahmoudMabrok/QuranyApp/master/app/src/main/assets/quran.json`
+    )
+      .then((res) => res.json())
+      .then((data) => {
+        setAyahs(data.data.surahs);
+        setPopup(true);
+      })
+      .catch((err) => console.error(err + "error"));
   };
+  // fetch("https://api.quran.com/api/v4")
+  //   .then((res) => res.json())
+  //   .then((d) => console.log(d.versions.v4));
 
   const closePopup = () => {
     setPopup(false);
@@ -51,12 +54,11 @@ const Quran = () => {
         <div className="md:grid  md:grid-cols-3 lg:grid-cols-5 w-full md:mx-auto  gap-2 pt-5 justify-center items-center">
           {surahs.map((item) => (
             <div
-              key={item.totalAyah}
-              onClick={() => fetchAyahs(item.totalAyah)}
+              key={item.number}
+              onClick={() => fetchAyahs(item.number)}
               className="qur max-sm:m-4 p-3 text-center border-2 rounded-lg border-yellow-900 cursor-pointer bg-opacity-70 hover:bg-opacity-100 text-gray-200">
-              {/* {console.log(item)} */}
-              <h3 id={item.number}>{item.surahNameArabicLong}</h3>
-              <p>{item.surahName}</p>
+              <h3 id={item.number}>{item.name}</h3>
+              <p>{item.englishName}</p>
             </div>
           ))}
         </div>
@@ -80,13 +82,6 @@ const Quran = () => {
           </Link>
         </div>
       </div>
-
-      {/* <button
-        className={` ${
-          ShowPopup ? "bottom-4" : "-bottom-96"
-        } fixed right-6 w-10 h-10 rounded-full z-30 text-black`}>
-        <FontAwesomeIcon icon={faArrowUp} />
-      </button> */}
 
       {popup && (
         <div className="popup-ayahs absolute top-0 right-0 h-full w-full bg-black bg-opacity-30 z-20">
