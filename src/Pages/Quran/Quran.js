@@ -13,13 +13,14 @@ const Quran = () => {
   const [popup, setPopup] = useState(false);
 
   useEffect(() => {
-    fetchSurahs();
+    // fetchSurahs();
+    fetchSurah();
   }, []);
 
-  const fetchSurahs = () => {
-    fetch("http://api.alquran.cloud/v1/surah")
+  const fetchSurah = () => {
+    fetch("https://quranapi.pages.dev/api/surah.json")
       .then((res) => res.json())
-      .then((data) => setSurahs(data.data))
+      .then((data) => setSurahs(data))
       .catch((err) => console.error(err + "error"));
   };
 
@@ -50,10 +51,11 @@ const Quran = () => {
         <div className="md:grid  md:grid-cols-3 lg:grid-cols-5 w-full md:mx-auto  gap-2 pt-5 justify-center items-center">
           {surahs.map((item) => (
             <div
-              key={item.number}
+              key={item.totalAyah}
               onClick={() => fetchAyahs(item.number)}
               className="qur max-sm:m-4 p-3 text-center border-2 rounded-lg border-yellow-900 cursor-pointer bg-opacity-70 hover:bg-opacity-100 text-gray-200">
-              <h3 id={item.number}>{item.name}</h3>
+              {console.log(item)}
+              <h3 id={item.number}>{item.surahNameArabicLong}</h3>
             </div>
           ))}
         </div>
