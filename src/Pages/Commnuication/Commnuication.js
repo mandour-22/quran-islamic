@@ -40,7 +40,8 @@ const Commnuication = () => {
 
         <div className="grid grid-cols-2 gap-8 max-md:grid-cols-1  pt-4 pb-4">
           <Link
-            href="https://www.linkedin.com/in/omar-mandour/"
+            target="_blank"
+            to="https://www.linkedin.com/in/omar-mandour/"
             className="flex items-center gap-4 border border-transparent shadow-md hover:border-gray-600 p-5 rounded-lg">
             <span>
               <FontAwesomeIcon
@@ -60,7 +61,8 @@ const Commnuication = () => {
             </div>
           </Link>
           <Link
-            href="https://www.linkedin.com/in/omar-mandour/"
+            target="_blank"
+            to="https://www.facebook.com/omarh.mandour"
             className="flex items-center gap-4 border border-transparent shadow-md hover:border-gray-600 p-5 rounded-lg">
             <span>
               <FontAwesomeIcon
@@ -71,7 +73,7 @@ const Commnuication = () => {
             <div className="flex flex-col">
               <h3 className="font-bold">فيس بوك</h3>
               <Link
-                href="https://www.facebook.com/omarh.mandour"
+                to="https://www.facebook.com/omarh.mandour"
                 target="_blank"
                 rel="noreferrer"
                 className="text-gray-300 hover:text-blue-400 hover:underline">
@@ -80,7 +82,8 @@ const Commnuication = () => {
             </div>
           </Link>
           <Link
-            href="https://www.linkedin.com/in/omar-mandour/"
+            target="_blank"
+            to="mailto: omarhassa321@gamil.com"
             className="flex items-center gap-4 border border-transparent col-span-2 max-sm:col-span-1 shadow-md hover:border-gray-600 p-5 rounded-lg">
             <span>
               <FontAwesomeIcon
@@ -91,7 +94,7 @@ const Commnuication = () => {
             <div className="flex flex-col">
               <h3 className="font-bold">ايميل</h3>
               <Link
-                href="mailto: omarhassa321@gamil.com"
+                to="mailto: omarhassa321@gamil.com"
                 target="_blank"
                 rel="noreferrer"
                 className="text-gray-300 text-sm  hover:text-blue-400 hover:underline">

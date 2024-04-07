@@ -52,10 +52,11 @@ const Quran = () => {
           {surahs.map((item) => (
             <div
               key={item.totalAyah}
-              onClick={() => fetchAyahs(item.number)}
+              onClick={() => fetchAyahs(item.totalAyah)}
               className="qur max-sm:m-4 p-3 text-center border-2 rounded-lg border-yellow-900 cursor-pointer bg-opacity-70 hover:bg-opacity-100 text-gray-200">
-              {console.log(item)}
+              {/* {console.log(item)} */}
               <h3 id={item.number}>{item.surahNameArabicLong}</h3>
+              <p>{item.surahName}</p>
             </div>
           ))}
         </div>
