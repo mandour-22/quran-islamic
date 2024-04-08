@@ -36,9 +36,6 @@ const Quran = () => {
       })
       .catch((err) => console.error(err));
   };
-  // fetch("https://api.quran.com/api/v4")
-  //   .then((res) => res.json())
-  //   .then((d) => console.log(d.versions.v4));
 
   const closePopup = () => {
     setPopup(false);
@@ -55,7 +52,13 @@ const Quran = () => {
           {surahs.map((item) => (
             <div
               key={item.number}
-              onClick={() => fetchAyahs(item.number)}
+              onClick={() => {
+                fetchAyahs(item.number);
+                window.scrollTo({
+                  top: 0,
+                  behavior: "smooth",
+                });
+              }}
               className="qur max-sm:m-4 p-3 text-center border-2 rounded-lg border-yellow-900 cursor-pointer bg-opacity-70 hover:bg-opacity-100 text-gray-200">
               <h3 id={item.number}>{item.name}</h3>
               <p>{item.englishName}</p>
@@ -84,7 +87,7 @@ const Quran = () => {
       </div>
 
       {popup && (
-        <div className="popup-ayahs absolute top-0 right-0 h-full w-full bg-black bg-opacity-30 z-20">
+        <div className="popup-ayahs absolute top-0 right-0 w-full bg-black bg-opacity-30 z-20">
           <div className="bg-yellow-900 w-full">
             <button
               className="text-white bg-red-500 text-lg px-5 cursor-pointer hover:bg-red-600 fixed inline-block top-16"
@@ -95,8 +98,8 @@ const Quran = () => {
             {ayahs.map((ay, i) => (
               <div
                 key={i}
-                className="text-center leading-10 px-3 border-b-2 border-gray-100">
-                <p className="font-serif text-xl mt-3 mb-3 text-gray-200">
+                className="text-center  px-3 border-b-2 border-gray-100">
+                <p className="font-serif text-2xl leading-10 mt-3 mb-3 text-gray-200">
                   {ay.text}
                 </p>
               </div>
