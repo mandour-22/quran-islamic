@@ -74,10 +74,10 @@ const DoaaAnbya = () => {
             </span>
           </Link>
           <Link
-            to={"/artical"}
+            to={"/donation"}
             className="bg-yellow-900 bg-opacity-30 rounded-md p-2 max-sm:text-sm hover:bg-opacity-50 cursor-pointer text-gray-300 hover:underline hover:text-white">
             <span>
-              الانتقال الى قسم مقالآت
+              الانتقال الى قسم التبرع
               <FontAwesomeIcon className="mx-2" icon={faArrowLeft} />
             </span>
           </Link>
