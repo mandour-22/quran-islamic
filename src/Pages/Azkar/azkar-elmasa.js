@@ -64,7 +64,7 @@ const AzkarElmasa = () => {
             </h2>
             <p className="text-gray-300 text-xl">{azkar.bless}</p>
             <span className="bg-orange-800 border border-gray-800 bg-opacity-50 px-10 pt-2 pb-2 mt-5 rounded-lg text-xl font-bold inline-block text-white">
-              {azkar.repeat}
+              {azkar.repeat} مرات
             </span>
           </div>
         ))}

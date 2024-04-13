@@ -51,7 +51,7 @@ const Navbar = () => {
           <Link
             to="/"
             className="flex items-center space-x-3 rtl:space-x-reverse">
-            <span className="self-center text-2xl mx-2 font-semibold whitespace-nowrap dark:text-white">
+            <span className="self-center text-2xl mx-2 font-semibold whitespace-nowrap text-white">
               Islamic
             </span>
             <img src={IconImg} className="w-8   h-8" alt="Logo" />

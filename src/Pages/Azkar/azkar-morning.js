@@ -4,12 +4,14 @@ import {
   faArrowLeft,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { click } from "@testing-library/user-event/dist/click";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 const AzkarMorning = () => {
   const [azkarMorning, setAzkarMorning] = useState([]);
   const [showPopupUp, setShowPopupUp] = useState(false);
+  const [count, setCount] = useState(); // Initial count
 
   const azkarApi = "https://ahegazy.github.io/muslimKit/json/azkar_sabah.json";
 
@@ -21,7 +23,6 @@ const AzkarMorning = () => {
       })
       .catch((err) => console.log("Failed to fetch data", err));
   };
-
   FetchAzkar();
 
   const scrollToTop = () => {
@@ -64,9 +65,12 @@ const AzkarMorning = () => {
                 {azkar.zekr}
               </h2>
               <p className="text-gray-300 text-xl">{azkar.bless}</p>
-              <span className="bg-orange-800 border border-gray-800 bg-opacity-50 px-10 pt-2 pb-2 mt-5 rounded-lg text-xl font-bold inline-block text-white">
-                {azkar.repeat}
-              </span>
+              <button
+                className=" btn bg-orange-800 border cursor-pointer hover:bg-opacity-30 border-gray-800 bg-opacity-50 px-10 pt-2 pb-2 mt-5 rounded-lg text-xl font-bold inline-block text-white"
+                disabled={count === 0}
+                onClick={() => {}}>
+                {azkar.repeat} مرات
+              </button>
             </div>
           ))}
 

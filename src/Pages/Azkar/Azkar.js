@@ -44,7 +44,7 @@ const Doaa = () => {
         <h1 className="title text-bold text-center w-fit mx-auto text-5xl text-gray-300 border-b-2 border-yellow-700 max-sm:mb-7 mb-14">
           الورد
         </h1>
-        <div className="">
+        <div>
           <div className="grid grid-cols-4 md:grid-cols-2 max-sm:grid-cols-1  gap-5">
             {itemListAzkar.map((item, i) => (
               <div
@@ -53,7 +53,7 @@ const Doaa = () => {
                 <Link
                   to={item.link}
                   className="flex items-center justify-center p-5">
-                  <h2 className="font-semibold text-white text-xl text-center">
+                  <h2 className="font-semibold text-white text-xl text-center ">
                     {item.name}
                   </h2>
                 </Link>

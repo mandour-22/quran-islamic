@@ -47,19 +47,8 @@ const router = createBrowserRouter(
   )
 );
 
-{
-  /* 
-<Header />
-<Quran />
-<Hadis />
-<Doaa />
-<Article />
-<Donation />
-<Commnuication />
-<Footer /> */
-}
 function App() {
-  const [fav, setFav] = useState(Icon);
+  const [fav] = useState(Icon);
   return (
     <>
       <Favicon url={fav} />

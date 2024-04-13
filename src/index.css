@@ -9,8 +9,17 @@
   direction: rtl;
   transition: all 0.2s ease-in-out;
 }
-body {
-  /* background-color: #42200699; */
+/* width */
+::-webkit-scrollbar {
+  width: 2px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px #9e9e9e;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #c95a35ab;
 }
 .h-section {
   height: calc(100vh - 112px);
