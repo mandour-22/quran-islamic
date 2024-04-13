@@ -22,6 +22,7 @@ import AzkarNome from "./Pages/Azkar/azkar-nome";
 import AzkarAlastikaz from "./Pages/Azkar/azkar-alastikaz";
 import DoaaAyahs from "./Pages/Azkar/doaa-ayahs";
 import DoaaAnbya from "./Pages/Azkar/doaa-anbya";
+import ErrorPage from "./Pages/ErrorPage/ErrorPage";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -42,7 +43,7 @@ const router = createBrowserRouter(
       <Route path="/doaa-ayahs" element={<DoaaAyahs />} />
       <Route path="/doaa-anbya" element={<DoaaAnbya />} />
       {/* ... etc. */}
-      <Route path="*" element={<h2>Opps..</h2>} />
+      <Route path="*" element={<ErrorPage />} />
     </Route>
   )
 );
