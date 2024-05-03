@@ -3,6 +3,9 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import moment from "moment";
 import "moment/locale/ar-dz";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowRight, faClose } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
 
 moment.locale("ar-dz");
 const SalahTime = () => {
@@ -85,6 +88,11 @@ const SalahTime = () => {
         <h1 className="font-rakkas text-bold text-center w-fit mx-auto text-5xl text-gray-300 border-b-2 border-yellow-700 mb-7">
           أوقات الصلاه
         </h1>
+        <Link to={"/home"} className="p-4 relative">
+          <button className="bg-primary hover:bg-red-600 absolute -right-5 -top-5 text-white mb-5 px-5 pt-1 pb-1 rounded-md hover:bg-opacity-80">
+            <FontAwesomeIcon icon={faClose} />
+          </button>
+        </Link>
         <div className="">
           <div className="sm:flex sm:items-center sm:justify-between">
             <span className="font-serif font-extrabold text-white text-5xl ">
