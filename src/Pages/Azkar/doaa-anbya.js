@@ -67,7 +67,7 @@ const DoaaAnbya = () => {
         <div className="flex justify-between select-none items-center gap-5 p-3 mt-10">
           <Link
             to={"/doaa-ayahs"}
-            className="bg-priamry bg-opacity-30 rounded-md p-2 max-sm:text-sm hover:bg-opacity-50 cursor-pointer text-gray-300 hover:underline hover:text-white">
+            className="bg-primary bg-opacity-30 rounded-md p-2 max-sm:text-sm hover:bg-opacity-50 cursor-pointer text-gray-300 hover:underline hover:text-white">
             <span>
               <FontAwesomeIcon className="mx-2" icon={faArrowRight} />
               الرجوع الى ادعيه قرائنيه
