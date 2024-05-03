@@ -30,11 +30,11 @@ const Commnuication = () => {
   return (
     <section className="p-5 grid sm:place-items-center max-sm:overflow-y-auto h-section">
       <div className="max-w-screen-xl mx-auto pt-5 pb-5 grid sm:place-items-center md:h-full">
-        <h1 className="title text-bold text-center w-fit mx-auto text-5xl text-gray-300 border-b-2 border-yellow-700 mb-10">
+        <h1 className="title text-bold text-center w-fit mx-auto text-5xl text-gray-300 border-b-2 border-color1 mb-10">
           تواصل معى
         </h1>
 
-        <h4 className="title text-bold text-center w-fit mx-auto text-2xl text-gray-300 border-b-2 max-sm:text-xl border-yellow-700 mb-10">
+        <h4 className="title text-bold text-center w-fit mx-auto text-2xl text-gray-300 border-b-2 max-sm:text-xl border-color1 mb-10">
           في حاله حدوث خطا فى المعلومات او اي شئ يمكنك التواصل معي عن طريق
         </h4>
 
@@ -127,7 +127,7 @@ const Commnuication = () => {
         onClick={scrollToTop}
         className={`${
           showPopupUp === true ? "bottom-3" : "-bottom-96"
-        } fixed right-4 bg-orange-300 w-10 h-10 max-sm:bg-opacity-50 rounded-full`}>
+        } fixed right-4 bg-primary text-white w-10 h-10 max-sm:bg-opacity-50 rounded-full`}>
         <FontAwesomeIcon icon={faArrowUp} />
       </button>
     </section>

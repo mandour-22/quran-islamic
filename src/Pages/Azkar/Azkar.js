@@ -41,7 +41,7 @@ const Doaa = () => {
   return (
     <section className=" p-5 grid sm:place-content-center overflow-y-auto h-section">
       <div className="max-w-screen-xl mx-auto">
-        <h1 className="title text-bold text-center w-fit mx-auto text-5xl text-gray-300 border-b-2 border-yellow-700 max-sm:mb-7 mb-14">
+        <h1 className="font-rakkas text-bold text-center w-fit mx-auto text-5xl text-gray-300 border-b-2 border-color1 max-sm:mb-7 mb-14">
           الورد
         </h1>
         <div>
@@ -49,7 +49,7 @@ const Doaa = () => {
             {itemListAzkar.map((item, i) => (
               <div
                 key={i}
-                className="inline-block border-2 text-border bg-yellow-900 bg-opacity-30 hover:bg-opacity-50 rounded-xl">
+                className="inline-block border-2 text-border bg-bgBtn bg-opacity-30 hover:bg-opacity-50 rounded-xl">
                 <Link
                   to={item.link}
                   className="flex items-center justify-center p-5">
@@ -64,7 +64,7 @@ const Doaa = () => {
         <div className="flex justify-between select-none items-center gap-5 p-3 mt-10">
           <Link
             to={"/hadis"}
-            className="bg-yellow-900 bg-opacity-30 rounded-md p-2 max-sm:text-sm hover:bg-opacity-50 cursor-pointer text-gray-300 hover:underline hover:text-white">
+            className="bg-primary bg-opacity-30 rounded-md p-2 max-sm:text-sm hover:bg-opacity-50 cursor-pointer text-gray-300 hover:underline hover:text-white">
             <span>
               <FontAwesomeIcon className="mx-2" icon={faArrowRight} />
               الرجوع الى الآحاديث
@@ -72,7 +72,7 @@ const Doaa = () => {
           </Link>
           <Link
             to={"/donation"}
-            className="bg-yellow-900 bg-opacity-30 rounded-md p-2 max-sm:text-sm hover:bg-opacity-50 cursor-pointer text-gray-300 hover:underline hover:text-white">
+            className="bg-primary bg-opacity-30 rounded-md p-2 max-sm:text-sm hover:bg-opacity-50 cursor-pointer text-gray-300 hover:underline hover:text-white">
             <span>
               الانتقال الى التبرع
               <FontAwesomeIcon className="mx-2" icon={faArrowLeft} />

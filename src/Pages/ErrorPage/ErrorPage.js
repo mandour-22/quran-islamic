@@ -22,7 +22,7 @@ const ErrorPage = () => {
           </p>
         </div>
         <Link to={"/home"}>
-          <button className="block w-fit mx-auto select-none hover:underline bg-orange-800 bg-opacity-50 text-gray-200 hover:bg-orange-900 hover:bg-opacity-70 px-5 pt-1 pb-1 rounded mt-5 mb-5">
+          <button className="block w-fit mx-auto select-none hover:underline bg-primary bg-opacity-50 text-gray-200 hover:bg-opacity-70 px-5 pt-1 pb-1 rounded mt-5 mb-5">
             الرجوع الي الصفحه الرئيسية
           </button>
         </Link>

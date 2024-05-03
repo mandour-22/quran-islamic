@@ -44,12 +44,12 @@ const Tasbeh = () => {
   return (
     <section className="h-full">
       <div className="max-w-screen-xl mx-auto pt-5 pb-5">
-        <h1 className="title text-bold text-center w-fit mx-auto text-5xl text-gray-300 border-b-2 border-yellow-700 mb-10">
+        <h1 className="font-rakkas text-bold text-center w-fit mx-auto text-5xl text-gray-300 border-b-2 border-color1 mb-10">
           التسابيح
         </h1>
 
         <Link to={"/azkar"} className="p-4">
-          <button className="bg-orange-300  mb-5 px-5 pt-1 pb-1 rounded-md hover:bg-opacity-80">
+          <button className="bg-primary text-white mb-5 px-5 pt-1 pb-1 rounded-md hover:bg-opacity-80">
             <FontAwesomeIcon icon={faArrowRight} className="ml-2" />
             الرجوع الي الورد
           </button>
@@ -58,12 +58,12 @@ const Tasbeh = () => {
         {azkarMorning.map((azkar, i) => (
           <div
             key={i}
-            className="border-2 text-border p-8 bg-yellow-900 bg-opacity-60 rounded-xl mb-5 mx-3 text-center leading-9">
+            className="border-2 text-border p-8 bg-primary bg-opacity-60 rounded-xl mb-5 mx-3 text-center leading-9">
             <h2 className="font-semibold text-white text-xl mb-4 leading-8">
               {azkar.content}
             </h2>
             <p className="text-gray-300 text-xl">{azkar.description}</p>
-            <span className="bg-orange-800 border border-gray-800 bg-opacity-50 px-10 pt-2 pb-2 mt-5 rounded-lg text-xl font-bold inline-block text-white">
+            <span className="bg-primary border border-color2 px-10 pt-2 pb-2 mt-5 rounded-lg text-xl font-bold inline-block text-white">
               {azkar.count} مرات
             </span>
           </div>
@@ -72,7 +72,7 @@ const Tasbeh = () => {
         <div className="flex justify-between select-none items-center gap-5 p-3 mt-10">
           <Link
             to={"/azkar-shalah"}
-            className="bg-yellow-900 bg-opacity-30 rounded-md p-2 max-sm:text-sm hover:bg-opacity-50 cursor-pointer text-gray-300 hover:underline hover:text-white">
+            className="bg-primary bg-opacity-30 rounded-md p-2 max-sm:text-sm hover:bg-opacity-50 cursor-pointer text-gray-300 hover:underline hover:text-white">
             <span>
               <FontAwesomeIcon className="mx-2" icon={faArrowRight} />
               الرجوع الى أذكار بعد انتهاء الصلاه
@@ -80,7 +80,7 @@ const Tasbeh = () => {
           </Link>
           <Link
             to={"/azkar-nome"}
-            className="bg-yellow-900 bg-opacity-30 rounded-md p-2 max-sm:text-sm hover:bg-opacity-50 cursor-pointer text-gray-300 hover:underline hover:text-white">
+            className="bg-primary bg-opacity-30 rounded-md p-2 max-sm:text-sm hover:bg-opacity-50 cursor-pointer text-gray-300 hover:underline hover:text-white">
             <span>
               الانتقال الى اذكار النوم
               <FontAwesomeIcon className="mx-2" icon={faArrowLeft} />
@@ -92,7 +92,7 @@ const Tasbeh = () => {
         onClick={scrollToTop}
         className={`${
           showPopupUp === true ? "bottom-3" : "-bottom-96"
-        } fixed right-4 bg-orange-300 w-10 h-10 max-sm:bg-opacity-50 rounded-full`}>
+        } fixed right-4 bg-primary text-white w-10 h-10 max-sm:bg-opacity-50 rounded-full`}>
         <FontAwesomeIcon icon={faArrowUp} />
       </button>
     </section>

@@ -46,12 +46,12 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="border-gray-200  ">
+      <nav className="border-gray-200 bg-primary">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
           <Link
             to="/"
             className="flex items-center space-x-3 rtl:space-x-reverse">
-            <span className="self-center text-2xl mx-2 font-semibold whitespace-nowrap text-white">
+            <span className="font-mono self-center text-2xl mx-2 font-semibold whitespace-nowrap text-white">
               Islamic
             </span>
             <img src={IconImg} className="w-8   h-8" alt="Logo" />

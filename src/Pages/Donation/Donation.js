@@ -60,10 +60,10 @@ const Donation = () => {
   return (
     <section className="p-5 grid sm:place-items-center max-sm:overflow-y-auto h-full">
       <div className="max-w-screen-xl mx-auto">
-        <h1 className="title text-bold text-center w-fit mx-auto text-5xl text-gray-300 border-b-2 border-yellow-700 mb-10">
+        <h1 className="title text-bold text-center w-fit mx-auto text-5xl text-gray-300 border-b-2 border-color1 mb-10">
           التبرع
         </h1>
-        <h3 className="title text-bold text-center w-fit mx-auto text-3xl text-gray-300 border-b-2 border-yellow-700 mb-10 mt-10">
+        <h3 className="title text-bold text-center w-fit mx-auto text-3xl text-gray-300 border-b-2 border-color1 mb-10 mt-10">
           وَافْعَلُوا الْخَيْرَ لَعَلَّكُمْ تُفْلِحُونَ
         </h3>
 
@@ -108,7 +108,7 @@ const Donation = () => {
         <div className="flex justify-between select-none items-center gap-5 p-3 mt-10">
           <Link
             to={"/azkar"}
-            className="bg-yellow-900 bg-opacity-30 rounded-md p-2 max-sm:text-sm hover:bg-opacity-50 cursor-pointer text-gray-300 hover:underline hover:text-white">
+            className="bg-primary bg-opacity-30 rounded-md p-2 max-sm:text-sm hover:bg-opacity-50 cursor-pointer text-gray-300 hover:underline hover:text-white">
             <span>
               <FontAwesomeIcon className="mx-2" icon={faArrowRight} />
               الرجوع الى الورد
@@ -116,7 +116,7 @@ const Donation = () => {
           </Link>
           <Link
             to={"/comunication"}
-            className="bg-yellow-900 bg-opacity-30 rounded-md p-2 max-sm:text-sm hover:bg-opacity-50 cursor-pointer text-gray-300 hover:underline hover:text-white">
+            className="bg-primary bg-opacity-30 rounded-md p-2 max-sm:text-sm hover:bg-opacity-50 cursor-pointer text-gray-300 hover:underline hover:text-white">
             <span>
               الانتقال الى التواصل
               <FontAwesomeIcon className="mx-2" icon={faArrowLeft} />
@@ -128,7 +128,7 @@ const Donation = () => {
         onClick={scrollToTop}
         className={`${
           showPopupUp === true ? "bottom-3" : "-bottom-96"
-        } fixed right-4 bg-orange-300 w-10 h-10 max-sm:bg-opacity-50 rounded-full`}>
+        } fixed right-4 bg-primary text-white w-10 h-10 max-sm:bg-opacity-50 rounded-full`}>
         <FontAwesomeIcon icon={faArrowUp} />
       </button>
     </section>
