@@ -4,7 +4,7 @@ import axios from "axios";
 import moment from "moment";
 import "moment/locale/ar-dz";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowRight, faClose } from "@fortawesome/free-solid-svg-icons";
+import { faClose } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 
 moment.locale("ar-dz");
@@ -15,16 +15,6 @@ const SalahTime = () => {
     Fajr: "04:39",
     Isha: "20:55",
     Maghrib: "20:30",
-  });
-
-  const [hajr, setHajr] = useState({
-    date: "20-10-1445",
-    format: "DD-MM-YYYY",
-    day: "20",
-    designation: { abbreviated: "AH", expanded: "Anno Hegirae" },
-    month: { number: 10, en: "Shawwāl", ar: "شَوّال" },
-    weekday: { en: "Al Athnayn", ar: "الاثنين" },
-    year: "1445",
   });
 
   const [selectCity, setSelectCity] = useState({
@@ -67,7 +57,6 @@ const SalahTime = () => {
       `https://api.aladhan.com/v1/timingsByCity?country=EG&city=${selectCity.en}`
     );
     setPrayerTimes(option.data.data.timings);
-    setHajr(option.data.data.date.hijri);
   };
   // console.log(hajr);
   useEffect(() => {
@@ -85,7 +74,7 @@ const SalahTime = () => {
   return (
     <section className="overflow-y-auto p-5 h-section flex sm:flex-col sm:items-center sm:justify-center place-items-center">
       <div className="max-w-screen-xl mx-auto">
-        <h1 className="font-rakkas text-bold text-center w-fit mx-auto text-5xl text-gray-300 border-b-2 border-yellow-700 mb-7">
+        <h1 className="font-rakkas text-bold text-center w-fit mx-auto text-5xl text-gray-300 border-b-2 border-color1 mb-7">
           أوقات الصلاه
         </h1>
         <Link to={"/home"} className="p-4 relative">
